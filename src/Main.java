@@ -78,27 +78,36 @@ public class Main {
 
         System.out.println(" Задание 6 ");
 
-        int weightOfBananas = 5 * 80;
-        int weightOfMilk = 200 * 105;
-        int weightOfIceCream = 2 * 100;
-        int weightEggs = 4 * 70;
-        int totalGrams = weightOfBananas + weightOfMilk + weightOfIceCream + weightEggs;
-        double totalKilograms = totalGrams / 1000.0;
-        System.out.println(" Вес завтрака в граммах " + totalGrams + " грамм ");
+
+        int weightOfBananas = 5;
+        int oneBananasGrams = 80;
+        int totalOfBananas = weightOfBananas * oneBananasGrams;
+        int weightOfMilk = 200;
+        int oneMilk100Gml = 105;
+        int totalOfMilk = (weightOfMilk / 100) * oneMilk100Gml;
+        int weightOfIceCream = 2;
+        int oneIceCream = 100;
+        int totalOfIceCream = weightOfIceCream * oneIceCream;
+        int weightEggs = 4;
+        int oneEggs = 70;
+        int totalOfEggs = weightEggs * oneEggs;
+        int weightOfBreakfastInGrams = totalOfBananas + totalOfMilk + totalOfIceCream + totalOfEggs;
+        float weightOfBreakfastInKilograms = weightOfBreakfastInGrams * 0.001f;
+        System.out.println(" Вес завтрака в граммах " + weightOfBreakfastInGrams);
+        System.out.println(" Вес завтрака в килограммах " + weightOfBreakfastInKilograms);
 
         System.out.println(" Задание 7 ");
 
-        short weightToLoseKg = 7;
-        double weightToLoseGrams = weightToLoseKg * 1000.0;
-        float minWeightToLossPerDay = 250.0f;
-        float maxWeightToLossPerDay = 500.0f;
-        int daysAtMinWeightLoss = (int) ( weightToLoseGrams / minWeightToLossPerDay);
-        System.out.println(" При потере 250 грамм в день потребуется " + daysAtMinWeightLoss + " дней ");
-        int daysAtMaxWeightLoss = (int) (weightToLoseGrams / maxWeightToLossPerDay);
-        System.out.println(" При потере 500 грамм в день потребуется " + daysAtMaxWeightLoss + " дней ");
-        float averageWeightLossPerDay = (minWeightToLossPerDay + maxWeightToLossPerDay) / 2f;
-        int averageDays = (int) (weightToLoseGrams / averageWeightLossPerDay);
-        System.out.println(" В среднем потребуется " + averageDays + " дней");
+        int resetWeight = 7;
+        float minGrams = 250;
+        float maxGrams = 500;
+        int resetWeightGrams = resetWeight * 1000;
+        float dayMax = (resetWeightGrams / minGrams);
+        System.out.println(" При потере 250 грамм в день, потребуется " + dayMax + " дней ");
+        float dayMin = (resetWeightGrams / maxGrams);
+        System.out.println(" При потере 500 грамм в день, потребуется " +  dayMin + " дней ");
+        float daysAverage = (dayMax + dayMin) / 2;
+        System.out.println( " В срееднем "+  daysAverage + " дней");
 
 
         System.out.println(" Задание 8 ");
@@ -123,6 +132,9 @@ public class Main {
         float kristinaNewSalary = kristinaSalary + kristinaIncrease;
         float kristinaAnnualDifference = kristinaIncrease * 12;
         System.out.println("Кристина теперь получает " + kristinaNewSalary + " рублей. Годовой доход вырос на " + kristinaAnnualDifference + " рублей.");
+
+
+
 
 
 
